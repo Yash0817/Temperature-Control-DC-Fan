@@ -1,0 +1,48 @@
+ARDUINO CODE : 
+// Libraries included
+#include <LiquidCrystal.h>
+// Declare constants
+const int LM35 = A0;
+const int motor = 13;
+const int LedRed = 12;
+const int LedGreen = 11;
+// initialize the library with the numbers of the interface pins
+LiquidCrystal lcd(2, 3, 4, 5, 6, 7);
+void setup() {
+ Serial.begin(9600);
+ lcd.begin(16, 2);
+ lcd.print("Hello, World!");
+ pinMode(motor, OUTPUT);
+ pinMode(LedRed, OUTPUT);
+ pinMode(LedGreen, OUTPUT);
+ delay(2000);
+ lcd.clear();
+ lcd.print("Temp= ");
+ lcd.setCursor(0,1);
+ lcd.print("Fan= ");
+}
+void loop() {
+ // Seccion para el sensor de temperatura
+ int value = analogRead(LM35);
+ float Temperature = value * 500.0 / 1023.0;
+ lcd.setCursor(6,0);
+ lcd.print(Temperature); 
+4
+ lcd.setCursor(5,1);
+ 
+ // Seccion para el motor
+ if (Temperature > 50){
+ digitalWrite(motor, HIGH);
+ digitalWrite(LedRed, HIGH);
+ digitalWrite(LedGreen, LOW);
+ lcd.print("ON ");
+ }
+ else {
+ digitalWrite(motor, LOW);
+ digitalWrite(LedRed, LOW);
+ digitalWrite(LedGreen, HIGH);
+ lcd.print("OFF");
+ }
+ 
+ delay(1000);
+}
