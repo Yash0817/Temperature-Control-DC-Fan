@@ -1,0 +1,49 @@
+Heat Generating Device: System based heat generating unit is 
+implemented to generate and vary the heat as per required for analysing the 
+speed of fan with respect to change in temperature.
+• Fan Induced and Nominal Convective Heat Transfer: The additional fan 
+speed increases the cooling of the device using convection, reducing the 
+temperature increase of the device.
+• Conductive Heat Transfer: This block is responsible for transferring the 
+heat by conduction through a layer of material. This transfer is based on 
+Fourier law and is directly proportional to the material thermal 
+conductivity, area normal to the heat flow direction, temperature 
+difference, and is inversely proportional to the thickness of the layer. 
+• Positive Supply Rail: This block represents an ideal positive supply rail. 
+Value of this parameter is set to 12V with respect to Electrical Reference 
+Block. 
+• Thermistor: This block represents an NTC thermistor having B-parameter 
+equation where temperature is governed by equation. m*c*dT/dt = Q 
+6
+where Q is the net heat flow into port A, m is the mass and c are the lumped 
+specific heat capacity. 
+• Resistor: The voltage-current (V-I) relationship for a linear resistor is in 
+general represented as V=I*R, where R is the constant resistance in ohms. 
+The positive and negative terminals of the resistor are denoted by the + and 
+- signs respectively.
+• Solver Configuration: This represents solver settings to be used for 
+simulation. Various parameters involved in it are tolerance value, solver 
+type and algebra to be used, iterations etc.
+• Controlled PWM Voltage: This block is a Pulse-Width Modulated (PWM) 
+voltage source across its PWM and REF ports that depends on the reference 
+voltage Vref across its +ref and -ref ports. The output voltage amplitude is 
+set by the Output voltage amplitude. 
+• H-Bridge: This block represents an H-bridge motor driver. This block can 
+also be driven by the Controlled PWM Voltage block in PWM or Averaged 
+mode. In PWM mode, the motor is under power if the PWM port voltage 
+V is above the Enable threshold voltage. 
+• DC Motor: This block represents a DC motor having the electrical and 
+torque characteristics with no electromagnetic energy are lost, and hence 
+the back emf and torque constants have the same numerical value when in 
+SI units. 
+• Aerodynamic Drag: The block represents an ideal source of torque 
+generation at its terminals which is proportional to the input physical 
+signal.
+• Rotational Motion Sensor: The block represents an ideal mechanical 
+rotational motion sensor, that is, a device that converts variable measured 
+between two mechanical rotational nodes into a control signal proportional 
+to angular velocity or angle. 
+• Fan Inertia: The block is an ideal mechanical rotational inertia which has 
+one mechanical rotational conserving port. 
+• PS- Simulink Converter: This block is converting the input Physical Signal 
+to a unitless Simulink output signal.
