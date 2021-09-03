@@ -1,0 +1,20 @@
+A fan is usually controlled manually by using a switch. This non-innovative 
+approach leads to wasted human effort and electricity. To overcome this issue, a 
+temperature controlled, automatic fan is proposed in our study. The automatic 
+control fan uses a microcontroller to sense the temperature of its environment 
+with the help of the temperature sensor (thermistor) that measures the temperature 
+of the environment. The desired temperature setpoint had been programmed on 
+the microcontroller with the Arduino program and can be changed according to 
+the needs of the user using switches connected to the controller circuit, the 
+temperature sensor reads the temperature. A TINKERCAD model is developed 
+to demonstrate the switching of the DC motor (fan) when in the desired 
+temperature range.
+Additionally, a MATLAB Simulink model can be used to simulate the required 
+circuit necessary for speed control of the fan Application of various blocks such as 
+heat generation unit, PWM unit, H Bridge, DC fan, rotational sensors and 
+converters shows us the complete flow of energy and its conversion. Each block 
+has different set-off values to be set and the output varies accordingly. Such as 
+value at heat generation unit can be set at various values and thermistor senses 
+this change. Now thermistor has its own specification of resistance, reference 
+temperature and temperature coefficient. All these values are varied within range 
+and speed of fan.
