@@ -1,0 +1,6 @@
+Initially, when reference temperature is 23 degree Celsius, speed of fan is nearly 
+100 rpm. When temperature increases to 27-degree Celsius speed of fan also 
+increases to 900 rpm. When temperature is maintained stable, speed of fan also 
+7
+remains constant. When temperature steeply rises to 37-degree Celsius speed 
+rises simultaneously to 2700 rpm. Figure (3) depicts the simulation figure.
